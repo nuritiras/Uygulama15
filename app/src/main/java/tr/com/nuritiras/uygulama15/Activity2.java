@@ -16,7 +16,7 @@ public class Activity2 extends AppCompatActivity {
         binding = Activity2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Intent intent = getIntent();
-        Bilgiler bilgiler = (Bilgiler) intent.getSerializableExtra("bilgiler");
+        Bilgiler bilgiler = (Bilgiler) intent.getSerializableExtra("bilgiler",Bilgiler.class);
         binding.textViewAdiSoyad.setText(bilgiler.getAdiSoyadi());
         binding.textViewEposta.setText(bilgiler.getePosta());
         binding.textViewTelefonNo.setText(bilgiler.getTelefonNo());
